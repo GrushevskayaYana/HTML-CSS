@@ -1,0 +1,912 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+ }
+ 
+ /* *, *:before, *:after {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+ }
+ 
+ :focus, :active {outline: none;}
+ a:focus, a:active {outline: none;}
+ 
+ nav, footer, header, aside {display: block;}
+ 
+ html, body {
+   height: 100%;
+   width: 100%;
+   font-size: 100%;
+   line-height: 1;
+   font-size: 14px;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+ }
+ 
+ input, button, textarea {font-family: inherit;}
+ 
+ input::-ms-clear {display: none;}
+ button {cursor: pointer;}
+ button::-moz-focus-inner {padding: 0; border: 0;}
+ a, a:visited {text-decoration: none;}
+ a:hover {text-decoration: none;}
+ ul li {list-style: none;}
+ img {vertical-align: top;}
+ 
+ h1, h2, h3, h4, h5, h6 {font-size: inherit;font-weight: 400;} */
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 16px;
+    background: #000;
+}
+a {
+   text-decoration: none;
+}
+
+img {
+   max-width: 100%;
+}
+
+.wrapper {
+   background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(74,40,0,1) 100%);
+   width: 100%;
+   overflow-x: hidden;
+}
+
+.container {
+   width: 1400px;
+   margin: 0 auto;
+}
+
+header {
+   padding: 50px 0;
+}
+
+span.logo, footer .blocks .logo {
+   text-transform: uppercase;
+   font-size: 29px;
+   font-weight: 800;
+}
+
+header nav {
+   float: right;
+   width: 50%;
+}
+
+header nav ul {
+   list-style: none;
+   display: flex;
+   justify-content: space-between;
+   z-index: 2;
+   position: relative;
+}
+
+header nav ul li {
+   display: inline-block;
+}
+
+header nav ul li a {
+   color: #fff;
+}
+
+header nav ul li.active::after {
+   content:'';
+   display: block;
+   width: 40px;
+   height: 5px;
+   background: #DC7000;
+   border-radius: 10px;
+   position: relative;
+   top: 10px;
+   left: -15px;
+}
+
+header nav ul li:not(.active):not(.btn) a:hover {
+   border-bottom: 5px solid #DC7000;
+}
+
+header nav ul li.btn a, .email .block button {
+   background: #FA9021;
+   padding: 9px 17px;
+   border-radius: 5px;
+   transition: all 500ms ease;
+}
+
+header nav ul li.btn a:hover, .email .block button:hover {
+   background: #824402;
+}
+
+.hero {
+   padding-bottom: 100px;
+   position: relative;
+   z-index: 1;
+}
+
+.hero--info {
+   width: 530px;
+   padding-top: 70px;
+}
+
+.hero--info h2 {
+   color: #E87D0E;
+   font-size: 20px;
+   font-weight: 600;
+}
+
+.hero--info h1 {
+   font-size: 50px;
+   font-weight: 600;
+}
+
+.hero--info p {
+   font-weight: 500;
+   line-height: 170%;
+   margin: 30px 0;
+}
+
+.hero--info .btn, .hero-about .info .btn{
+   background: #FA8305;
+   color: #fff;
+   border-radius: 50px;
+   padding: 15px 30px;
+   border: 0;
+   transition: all 500ms ease;
+}
+
+.hero--info .btn:hover, .hero-about .info .btn:hover{
+   cursor: pointer;
+   transform: scale(1.1);
+}
+
+.hero img {
+   position: absolute;
+   top: -150px;
+   right: 0;
+}
+
+/* Секция с играми */
+
+.trending {
+   padding-top: 50px;
+}
+
+.trending h3 {
+   font-weight: 600;
+   font-size: 31px;
+}
+
+.trending .see-all, .projects .see-all {
+   color: #fff;
+   background: #494643;
+   border-radius: 5px;
+   padding: 12px 23px;
+   float: right;
+   display: block;
+   transition: all 500ms ease;
+}
+
+.trending .see-all:hover, .projects .see-all:hover {
+   transform: scale(1.1);
+}
+
+.projects .see-all {
+   float: none;
+}
+
+.trending .games {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   padding: 50px 0;
+}
+
+.trending .games span {
+   display: block;
+   text-align: center;
+   margin-top: 20px;
+}
+
+.trending .games span img {
+   position: relative;
+   top: 5px;
+   margin-right: 7px;
+}
+
+.big-text {
+   font-weight: 600;
+   font-size: 35px;
+   padding: 50px 0;
+   text-align: center;
+   width: 800px;
+}
+
+.banner {
+   padding: 80px 0;
+}
+
+.banner h3 {
+   font-weight: 600;
+   font-size: 30px;
+   margin-bottom: 30px;
+}
+
+.banner p {
+   line-height: 170%;
+   margin-bottom: 30px;
+   width: 550px;
+}
+
+.banner img {
+   width: 100%;
+   margin-bottom: 30px;
+}
+
+/* Секция с изображением */
+
+.features {
+   background: url('/Users/mac/Desktop/www/img/BG.png') no-repeat center center fixed;
+   background-size: cover;
+   padding: 80px 0;
+}
+
+.features h3,
+.features p {
+   margin-bottom: 20px;
+   text-align: center;
+   max-width: 800px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.features h3 {
+   font-size: 30px;
+}
+
+.features .info {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+.features .info .block {
+   text-align: center;
+   width: 20%;
+   margin: 30px 2%;
+}
+
+.features .info .block img {
+   margin-bottom: 15px;
+}
+
+.projects {
+   padding: 100px 0;
+}
+
+.projects h3 {
+   font-size: 30px;
+   text-align: center;
+}
+
+.projects p {
+   margin: 40px 0;
+   text-align: center;
+}
+
+.projects .images {
+   display: flex;
+   justify-content: space-around;
+   margin-bottom: 25px;
+}
+
+.projects .see-all {
+   float: none;
+   width: 60px;
+   text-align: center;
+   margin: 0 auto;
+}
+
+.email {
+   padding-bottom: 120px;
+}
+
+.email h3 {
+   margin-top: 60px;
+   font-size: 30px;
+}
+
+.email .block {
+   background: #1C140F;
+   margin-top: 30px;
+   border-radius: 10px;
+   padding: 40px 3%;
+   width: 93%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.email .block h4 {
+   font-size: 30px;
+   font-weight: 500;
+}
+.email .block p {
+   width: 500px;
+}
+
+.email .block input {
+   background: #fff;
+   outline: none;
+   border: 0;
+   border-radius: 5px;
+   width: 380px;
+   font-family: "Poppins", sans-serif;
+   font-weight: 400;
+   padding: 20px 30px;
+   position: relative;
+   right: -95px;
+   z-index: 1;
+   padding-right: 120px;
+}
+
+.email .block input::placeholder {
+   color: #898989;
+}
+
+.email .block button {
+   cursor: pointer;
+   border: 0;
+   padding: 13px 17px;
+   position: relative;
+   z-index: 2;
+   color: #fff;
+}
+
+/* Footer */
+footer {
+   background: #000;
+   padding: 50px 0;
+}
+
+footer .blocks {
+   display: flex;
+   justify-content: space-between;
+}
+
+footer .blocks p {
+   width: 300px;
+   margin: 15px 0;
+}
+
+footer .blocks h4 {
+   font-weight: 500;
+   font-style: 17px;
+}
+
+footer .blocks ul {
+   list-style: none;
+}
+
+footer .blocks ul li {
+   margin-top: 7px;
+   opacity: 0.8;
+}
+
+footer hr {
+   margin: 30px 0;
+   border: 0;
+   height: 0.6px;
+   background: #ccc;
+}
+
+footer .bo {
+   text-align: center;
+}
+
+/* About us */
+
+/* nav .about ol {
+   list-style: none; 
+   padding: 0; 
+}
+
+nav .about li {
+   display: inline; 
+}   
+
+nav .about li:not(:last-child):after {
+   content: '>'; 
+   margin: 0 5px; 
+}
+
+nav .about a {
+   text-decoration: none; 
+}
+
+nav .about li {
+   font-size: 12px;
+   font-weight: 400;
+}
+
+
+nav ol.about li a .orang {
+   color: orange;
+}
+
+
+nav ol.about li a {
+   color: white;
+   text-decoration: none; 
+}  */
+
+.hero-about {
+   position: relative;
+}
+
+.hero-about .info {
+   width: 500px;
+   padding: 250px 0;
+}
+
+.hero-about .info h1 {
+   margin-bottom: 15px;
+   font-size: 30px;
+}
+
+.hero-about .info .btn {
+   margin-top: 20px;
+}
+
+.hero-about img {
+   position: absolute;
+   right: -150px;
+   top: 0;
+}
+
+.work {
+   padding: 80px 0;
+}
+
+.work h2 {
+   font-size: 25px;
+   margin-bottom: 40px;
+}
+
+.work .blocks {
+   display: flex;
+   justify-content: space-between;
+}
+
+.work .blocks .block {
+   width: 25%;
+   border-radius: 10px;
+   padding: 50px 35px;
+   background: #1C140F;
+}
+
+.work .blocks .block h3 {
+   font-size: 20px;
+   margin: 20px 0;
+}
+
+.work .blocks .block .badge {
+   border-radius: 7px;
+   padding: 10px 20px;
+}
+
+.work .blocks .block .badge.purple {
+   background: #B000DC;
+}
+
+.work .blocks .block .badge.brown {
+   background: #DC4200;
+}
+
+.work .blocks .block .badge.green {
+   background: #00DC8D;
+}
+
+/* Страница контактов */
+
+.hero-contacts h1 {
+   text-align: center;
+   margin-top: 70px;
+   margin-bottom: 30px;
+   font-size: 33px;
+}
+
+.hero-contacts p {
+   text-align: center;
+}
+
+.hero-contacts img {
+   width: 70%;
+   margin: 80px 15%;
+}
+.feedback {
+   padding: 70px 0;
+   background: #1C140F;
+}
+
+.feedback h2 {
+   text-align: center;
+   font-weight: 500;
+   font-size: 30px;
+}
+
+.feedback p {
+   text-align: center;
+   margin-top: 10px;
+}
+
+.feedback form {
+   margin: 80px auto;
+   width: 600px;
+}
+
+.feedback form .inline {
+   display: flex;
+   justify-content: space-between;
+}
+
+.feedback form .inline>div {
+   width: 50%;
+}
+
+.feedback form label {
+   color: #4F4F4F;
+   font-size: 14px;
+}
+
+.feedback form input,
+.feedback form textarea {
+   background: #2C2420;
+   border-radius: 10px;
+   border: 0.6px solid #cecece;
+   display: block;
+   width: 90%;
+   padding: 15px 10px;
+   outline: none;
+   color: #fff;
+   margin-top: 7px;
+   margin-bottom: 20px;
+}
+
+.feedback form .one-line {
+   width: 96%;
+}
+
+.feedback form textarea {
+   resize: none;
+   height: 200px;
+}
+
+.feedback form button {
+   background: #DC7000;
+   border-radius: 5px;
+   border: 0;
+   float: right;
+   cursor: pointer;
+   color: #fff;
+   padding: 15px 35px;
+   transition: all 500ms ease;
+}
+
+.feedback form button:hover {
+   background: #b01414;
+   
+}
+
+.ccp h1 {
+   font-size: 33px;
+   font-weight: 600;
+   text-align: center;
+}
+
+.ccp p {
+   font-size: 16px;
+   font-weight: 400;
+   text-align: center;
+}
+
+.block.clients {
+   background-color: #1C140F;
+   display: flex;
+   justify-content: space-between;
+}
+
+.ccp.container {
+   width: 942px;
+   margin-bottom: 45px;
+   padding-top: 45px;
+}
+
+.ccp.container h1, p {
+   padding-bottom: 5px;
+}
+
+.block.clients.container {
+   margin-bottom: 43px;
+   border-radius: 10px;
+   height: 200px;
+}
+
+.clients_,.countries,.projects_1 {
+   text-align: center;
+   width: 29%;
+   padding-top: 37.5px;
+   padding-bottom: 37.5px;
+   width: 380px;
+
+}
+
+.vector img {
+   height: 125px;
+   padding-top: 37.5px;
+   padding-bottom: 37.5px;
+}
+
+.clients_ {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.clients_ img {
+   width: 55px;
+   height: 55px;
+   margin-right: 30px;
+}
+
+.clients_ h3 {
+   font-size: 25px;
+   padding-bottom: 3px;
+   font-weight: 400;
+}
+
+.clients_ p {
+   font-size: 20px;
+   padding-bottom: 2px;
+   font-weight: 200;
+}
+
+.countries {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.countries img {
+   width: 55px;
+   height: 55px;
+   margin-right: 30px;
+}
+
+.countries h3 {
+   font-size: 25px;
+   padding-bottom: 3px;
+   font-weight: 400;
+}
+
+.countries p {
+   font-size: 20px;
+   padding-bottom: 2px;
+   font-weight: 200;
+}
+
+.projects_1 {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.projects_1 img {
+   width: 55px;
+   height: 55px;
+   margin-right: 30px;
+}
+
+.projects_1 h3 {
+   font-size: 25px;
+   padding-bottom: 3px;
+   font-weight: 400;
+}
+
+.projects_1 p {
+   font-size: 20px;
+   padding-bottom: 2px;
+   font-weight: 200;
+}
+
+.video.container {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 100px;
+   width: 1184px;
+   margin-bottom: 100px;
+}
+
+.video.container img {
+   width: 669px;
+   margin-right: 87px;
+}
+
+.info-video {
+   width: 428px;
+}
+
+.info-video h1 {
+   width: 383px;
+   font-size: 30px;
+   font-weight: 600;
+   padding-bottom: 5px;
+}
+
+.info-video p {
+   font-size: 14px;
+   font-weight: 300;
+   padding-bottom: 20px;
+}
+
+.info-video li {
+   font-size: 14px;
+   font-weight: 300;
+   padding-bottom: 20px;
+}
+
+.info-video ul {
+   list-style: none;
+}
+
+.info-video li::before {
+   content: "\2713"; /* Символ галочки (U+2713) */
+   display: inline-block;
+   width: 20px;
+   height: 20px;
+   border: 1px solid #00DC8D;
+   border-radius: 50%; /* Робимо круглу форму */
+   text-align: center;
+   line-height: 20px;
+   margin-right: 10px; /* Відступ між галочкою і текстом */
+   background-color: #00DC8D;
+   color: #000;
+}
+
+.hero-info.container {
+   width: 1170px;
+   height: 489px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.hero-info.container img {
+   height: 489px;
+   width: 496px;
+}
+
+.info {
+   width: 536px;
+   height: 464px;
+}
+
+.info h1 {
+   font-size: 30px;
+   font-weight: 200;
+   margin-bottom: 30px;
+}
+
+.info h6 {
+   font-size: 17px;
+   font-weight: 200;
+   margin-bottom: 30px;
+}
+
+.info p {
+   font-size: 17px;
+   font-weight: 200;
+   margin-bottom: 30px;
+}
+
+.btn-info {
+   background: #FA8305;
+   color: #fff;
+   border-radius: 50px;
+   padding: 15px 30px;
+   border: 0;
+   transition: all 500ms ease;
+}
+
+.btn-info:hover{
+   cursor: pointer;
+   transform: scale(1.1);
+}
+
+.hero-about2.container {
+   width: 1170px;
+   height: 489px;
+   display: flex;
+   justify-content: space-between;
+   margin-top: 100px;
+   margin-bottom: 100px;
+}
+
+.hero-about2.container img {
+   height: 489px;
+   width: 496px;
+}
+
+.btn-about2 {
+   background: #FA8305;
+   color: #fff;
+   border-radius: 50px;
+   padding: 15px 30px;
+   border: 0;
+   transition: all 500ms ease;
+}
+
+.btn-about2:hover{
+   cursor: pointer;
+   transform: scale(1.1);
+}
+
+.reviews {
+   background: #1C140F;
+   margin-top: 100px;
+   width: 1440px;
+   height: 738px;
+}
+
+.reviews h1 {
+   text-align: center;
+   padding-top: 50px;
+   font-size: 35px;
+   font-weight: 400;
+   padding-bottom: 20px;
+
+}
+
+.reviews p {
+   text-align: center;
+   font-size: 14px;
+   font-weight: 400;
+   padding-bottom: 50px;
+
+}
+
+.blocks {
+   display: flex;
+   justify-content: space-between;
+}
+
+.block_people {
+   width: 30%;
+   border-radius: 10px;
+   padding: 10px 10px;
+   border: 2px  solid #DDDDDD;
+   margin-left: 100px;
+   margin-right: 20px;
+}
+
+.block_in_block {
+   display: flex;
+   justify-content: space-between;
+}
+
+.block_in_block img {
+   margin-left: 30px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+.block_in_block h3 {
+   margin-left: 30px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
